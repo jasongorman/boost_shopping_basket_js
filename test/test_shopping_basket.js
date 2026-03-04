@@ -1,12 +1,9 @@
 const assert = require("assert");
-
-function total(basket) {
-    return 0.0;
-}
+const total = require("../src/basket.js")
 
 describe("Sopping basket total", () => {
     it("is zero when the basket is empty", () => {
-        let basket = [];
+        const basket = [];
         assert.strictEqual(total(basket), 0.0);
     })
 })
