@@ -1,6 +1,8 @@
+const subtotal = require("../src/item.js")
+
 function total(basket) {
     return basket
-        .map((item) => item.price * item.quantity)
+        .map((item) => subtotal(item))
         .reduce((price, subtotal) => subtotal + price, 0.0)
 }
 
