@@ -1,11 +1,7 @@
 function total(basket) {
-    let subtotal = 0.0;
-
-    for(item of basket){
-        subtotal += item.price;
-    }
-
-    return subtotal;
+    return basket
+        .map((item) => item.price * item.quantity)
+        .reduce((price, subtotal) => subtotal + price, 0.0)
 }
 
 module.exports = total;

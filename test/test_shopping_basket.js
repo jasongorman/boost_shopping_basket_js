@@ -32,4 +32,15 @@ describe("Sopping basket total", () => {
 
         assert.strictEqual(total(basket), 15.0);
     })
+
+    it("is price * quantity for a single item", () => {
+        const basket = [
+            {
+                price: 79.99,
+                quantity: 2
+            }
+        ];
+
+        assert.strictEqual(total(basket), 159.98);
+    })
 })
