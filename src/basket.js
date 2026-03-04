@@ -1,8 +1,11 @@
 function total(basket) {
-    if(basket.length > 0){
-        return 9.99;
+    let subtotal = 0.0;
+
+    for(item of basket){
+        subtotal += item.price;
     }
-    return 0.0;
+
+    return subtotal;
 }
 
 module.exports = total;

@@ -17,4 +17,19 @@ describe("Sopping basket total", () => {
 
         assert.strictEqual(total(basket), 9.99);
     })
+
+    it("is the sum of prices of two items", () => {
+        const basket = [
+            {
+                price: 10.0,
+                quantity: 1
+            },
+            {
+                price: 5.0,
+                quantity: 1
+            }
+        ];
+
+        assert.strictEqual(total(basket), 15.0);
+    })
 })
